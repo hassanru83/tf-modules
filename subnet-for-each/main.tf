@@ -6,6 +6,6 @@ resource "google_compute_subnetwork" "subnet" {
     network       = each.value.network
     secondary_ip_range {
         range_name    = each.value.range_name
-        ip_cidr_range = each.value.secondary_ip_range
+        ip_cidr_range = each.value.secondary_ip_cidr_range
   }
 }
